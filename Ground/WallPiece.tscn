@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Ground/tilesheet.png" type="Texture" id=1]
+[ext_resource path="res://Ground/WallPiece.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 32, 320 )
+
+[node name="WallPiece" type="Node2D"]
+script = ExtResource( 2 )
+fall_speed = 100.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+rotation = 1.5708
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 64 )
+rotation = 1.5708
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 128 )
+rotation = 1.5708
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 192 )
+rotation = 1.5708
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 256 )
+rotation = 1.5708
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite6" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 320 )
+rotation = 1.5708
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite7" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 384 )
+rotation = 1.5708
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite8" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 448 )
+rotation = 1.5708
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite9" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 512 )
+rotation = 1.5708
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite10" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 576 )
+rotation = 1.5708
+frames = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, 288 )
+shape = SubResource( 3 )
